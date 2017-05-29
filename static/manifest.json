@@ -1,0 +1,17 @@
+{
+  "short_name": "Master Maker",
+  "name": "Master Maker",
+  "description": "",
+  "start_url": "/",
+  "lang": "nl",
+  "theme_color": "#007bc7",
+  "background_color": "#f6f6f6",
+  "display": "minimal-ui",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 256x256 384x384 512x512"
+    }
+  ]
+}

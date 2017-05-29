@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf8">
+  <title>Master Maker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bc7">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700|Quicksand:300,700">
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body class="home">
+  <nav>
+    <a href="/">
+      <h1>
+        <img width="200" height="200" src="icon.svg" alt="Master Maker">
+      </h1>
+    </a>
+    <ol>
+      <% nav.forEach(function (one) { %>
+        <li>
+          <a
+            href="/<%= one.slug %>.html"
+            style="background-color:<%= one.color %>"
+          ><%= one.section %>. <%= one.title %></a>
+        </li>
+      <% }) %>
+    </ol>
+  </nav>
+  <main>
+    <div>
+      <header>
+        <div>
+          <img width="200" height="200" src="icon.svg" alt="">
+          <h1>
+            <span>Master <span>maker</span></span>
+          </h1>
+          <a id="down" class="nojs" href="#content">Down</a>
+        </div>
+      </header>
+      <article id="content">
+        <% nav.forEach(function (one, index) { %>
+          <% if (index && index % 2 === 0) { %>
+            <div class="block image">
+              <img width="200" height="200" src="<%= one.name %>.svg" alt="">
+            </div>
+          <% } %>
+          <div class="block">
+            <a
+              href="/<%= one.slug %>.html"
+              style="background-color:<%= one.color %>"
+            ><h2><%= one.section %>. <%= one.title %></h2></a>
+            <p><%= one.description %></p>
+          </div>
+        <% }) %>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <a href="http://www.hva.nl">
+      <img width="200" height="33" src="hva.svg" alt="Hogeschool van Amsterdam">
+    </a>
+  </footer>
+  <script src="/index.js"></script>
+</body>
+</html>

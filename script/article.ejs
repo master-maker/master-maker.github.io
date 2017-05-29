@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf8">
+  <title><%= section %>. <%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#007bc7">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700|Quicksand:300">
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body class="article">
+  <nav>
+    <a href="/">
+      <h1>
+        <img width="200" height="200" src="icon.svg" alt="Master Maker">
+      </h1>
+    </a>
+    <ol>
+      <% nav.forEach(function (one) { %>
+        <li>
+          <a
+            href="/<%= one.slug %>.html"
+            style="background-color:<%= one.color %>"
+          ><%= one.section %>. <%= one.title %></a>
+        </li>
+      <% }) %>
+    </ol>
+  </nav>
+  <main>
+    <h1 style="background-color:<%= color %>"><%= section %>. <%= title %></h1>
+    <div>
+      <aside>
+        <img width="200" height="200" src="<%= name %>.svg" alt="">
+      </aside>
+      <article class="<%= name %> <%= tabs.length > 1 ? 'has-tabs' : '' %>">
+        <% if (tabs.length > 1) { %>
+          <header class="tabs">
+            <ol>
+              <% tabs.forEach(function (one, index) { %>
+                <li class="<%= one.slug === slug ? 'active' : '' %>">
+                  <a href="/<%= one.slug %>.html"><%= one.subtitle %></a>
+                </li>
+              <% }) %>
+            </ol>
+          </header>
+        <% } %>
+        <%- file.contents %>
+        <footer>
+          <% if (prev) { %>
+            <a class="prev" href="/<%= prev.slug %>.html">
+            « <%= prev.tab %>.
+            <%= prev.title %><%= prev.subtitle ? ': ' + prev.subtitle : '' %>
+            </a>
+          <% } %>
+          <% if (next) { %>
+            <a class="next" href="/<%= next.slug %>.html">
+            <%= next.tab %>.
+            <%= next.title %><%= next.subtitle ? ': ' + next.subtitle : '' %>
+            »</a>
+          <% } %>
+        </footer>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <a href="http://www.hva.nl">
+      <img width="200" height="33" src="hva.svg" alt="Hogeschool van Amsterdam">
+    </a>
+  </footer>
+  <script src="/index.js"></script>
+</body>
+</html>
