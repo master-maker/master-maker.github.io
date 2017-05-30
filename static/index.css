@@ -547,9 +547,13 @@ article .next {
   }
 
   .tabs {
+    background-color: hsl(0, 0%, 81%);
     margin-top: 1px !important;
+    position: relative;
+    z-index: 1;
     margin-right: -200px;
-    margin-bottom: 0;
+    margin-left: -300px;
+    margin-bottom: -1px;
     border-width: 0;
   }
 
@@ -559,6 +563,21 @@ article .next {
 
   .tabs li {
     flex: 1;
+    border-width: 0;
+    margin-top: 0;
+  }
+
+  .tabs .active {
+    border-top-left-radius: 15px;
+  }
+
+  .tabs .active:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+
+  .tabs li:first-child {
+    padding-left: 300px;
   }
 
   .tabs li:last-child {
