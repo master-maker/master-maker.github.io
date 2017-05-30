@@ -389,6 +389,10 @@ article ol {
   list-style-type: circle;
 }
 
+article th {
+  text-align: left;
+}
+
 article th,
 article td {
   background-color: #c6e2e1;
