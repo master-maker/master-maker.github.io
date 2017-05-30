@@ -409,16 +409,27 @@ table + footer,
   border-top-width: 0;
 }
 
-main footer .prev {
-  float: left;
+article footer {
+  display: flex;
 }
 
-main footer .next {
-  float: right;
+article .prev,
+article .next {
+  flex: 1;
 }
 
-body > footer {
-  display: none;
+article .prev {
+  text-align: left;
+}
+
+article .next {
+  text-align: right;
+}
+
+.hva {
+  display: block;
+  text-align: center;
+  padding: 40px;
 }
 
 @media (min-width: 40em) {
@@ -560,13 +571,15 @@ body > footer {
     margin-right: 0;
   }
 
-  body > footer {
-    display: block;
-    bottom: 0;
-    left: 1120px;
-    margin-left: 60px;
-    margin-bottom: 40px;
-    position: fixed;
+  .hva {
+    padding: 0;
+    height: 100px;
+  }
+
+  .article .hva {
+    padding: 0 200px 0 300px;
+    text-align: right;
+    margin-top: -100px;
   }
 }
 
