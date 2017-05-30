@@ -647,3 +647,67 @@ article .next {
   background-size: 40px;
   background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAQAAABLsoKjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBRgOMASeNE1nAAADjElEQVRYw8WZMYwTVxCG/7OIEgQSS5MqSG4ikgpLaaI0eVISUQGOEAUo0rmgIEV0lyJSikh3ZVKRDqWyC6QoFHivoEAUtzSU7NJFSpFrqfaBTgpRAl+KfYvXjr37nu093jT2emb+nf/NrmfmbaCA9amMJCMpUk9SJispkZToYYAffCRikzE5dStnyCaRj7+Nxki7uqm++/xEiawSSVaZpJ4iSUaRjM45nVjf6mCVSLsMXRwx23QbdLeJnfawPuI6SnccoSM/0pzVyJG9s9hqsXHqALvegJOYi4jTRbDzzXrkQIYJBizFkAE5PV/QATmQBJA6n6sEyBn4gA4crasAllLs76AJdDBfbWmZ62/eXq4PsoSd2dvpXcjXRuwsyXk1Q6qQKZCsHVKIZPoBmvywC2QrZuwiiciA3VnQLjms8Fw2ialSXOV9/btZlXiCUMYJLPHCC5EKRnFh3HqcJZvjEjQCaCmFptPJ4XQk9SXtyYbULUstq70CrQRNWoeUQzFF5ZC3nkTVZMpR8QRlRwIpRAaYjowHuZd1y4u+dxTro2aCj0lSQ/V2WiOd1KG+a4A8pt90UR/oQy0uMa0kFS9j00DKNV4CP9TqdLgNHPJxrZYBEj9QcQOAb2o0bgEv+LzBjwP90zN3vwdesbng1x+Bf/my0UsPSAXgmXk/LXRcf0PTAoSAil+Av/li5urXAGx5+gDEQcCrocOvwCGfVK59xStgx9NDD8h8E6mUt7g3VWhd4h/gprd9UPZO5DgPgaecRXzGC2DIRhhox7V8/usvXdBjvasHuqJYb+uursu/szaSko6spG4AqPRc5/W7zuiOTuqBruplgG1UvJEMkAbQW8h7HACPOBFolwJGCLvUX9v73Od0oE0XsEXlkEivG3z/9YfOKw+06UuKi8ohdhvc/jIuRN5AYVZ8rRTCLcoIiNEbLbaPoq2oFPQTvm3rDZSdbaCKVjFtrVVM57WKZQ+53wro/nTvO30/FhiuHXJYpXYWVPSwrQw67OJBR6lyxCOdidp6SB76Da8KWAvsrzym2wes35husrfpSgPJ9P97WQ9aPkAwXmr0Ooa6AVEdPbtYnzn1jFWxj5bd8CFz6WLkBuRjthrH6VsuwsZZuM/Bwc+65D5nrw8Onrkq8pTKg4Oe09nTdtPBQTOoJEXqy6ivUzU6zxQrUewzMPEDnZQbRuVh0DlJTyqHQYm/m/8AYVSehM16SAQAAAAASUVORK5CYII=');
 }
+
+@media print {
+  nav,
+  header,
+  .home header,
+  article footer {
+    display: none;
+  }
+
+  body.home main {
+    display: block;
+  }
+
+  body {
+    max-width: 100%;
+  }
+
+  main {
+    box-shadow: none;
+  }
+
+  main,
+  body.home main {
+    margin-left: 0;
+  }
+
+  main h1,
+  article td,
+  article th {
+    color: black;
+  }
+
+  .home header,
+  .home main > div,
+  .article main h1 {
+    border-top-right-radius: 0;
+  }
+
+  .article main h1 {
+    padding-left: 40px;
+  }
+
+  main article,
+  main aside {
+    padding: 40px;
+  }
+
+  main aside {
+    position: relative;
+  }
+
+  .hva {
+    margin: 0 !important;
+    text-align: center !important;
+    padding: 40px !important;
+  }
+
+  .home .block {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
