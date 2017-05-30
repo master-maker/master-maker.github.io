@@ -548,12 +548,10 @@ article .next {
 
   .tabs {
     background-color: hsl(0, 0%, 81%);
-    margin-top: 1px !important;
     position: relative;
     z-index: 1;
-    margin-right: -200px;
-    margin-left: -300px;
-    margin-bottom: -1px;
+    margin: 1px -200px -1px -300px;
+    margin-top: 1px !important;
     border-width: 0;
   }
 
