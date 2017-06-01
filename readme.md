@@ -11,6 +11,14 @@ npm install
 npm test
 ```
 
+## License
+
+[MIT][license] © [Titus Wormer][author]
+
 [screenshot]: screenshot.png
 
 [home]: http://hvamastermaker.nl
+
+[license]: LICENSE
+
+[author]: http://wooorm.com
