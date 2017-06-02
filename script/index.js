@@ -104,7 +104,7 @@ trough()
   .use(function (configs, next) {
     return async.map(configs, staticline.run, next);
   })
-  .run('static/*.*', bail);
+  .run('static/*', bail);
 
 trough()
   .use(glob)
